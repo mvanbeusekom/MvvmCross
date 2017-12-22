@@ -54,6 +54,8 @@ namespace Playground.Core.ViewModels
             _counter = int.Parse(state.Data["MyKey"]);
         }
 
+        public bool IsLoggedIn => true;
+
         public IMvxAsyncCommand ShowChildCommand { get; private set; }
 
         public IMvxAsyncCommand ShowModalCommand { get; private set; }

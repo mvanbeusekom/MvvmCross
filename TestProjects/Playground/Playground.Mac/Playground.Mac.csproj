@@ -114,6 +114,7 @@
     </Compile>
     <Compile Include="TabsRootView.cs" />
     <Compile Include="ValueConverters\RandomColorValueConverter.cs" />
+    <Compile Include="ValueConverters\NotValueConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />

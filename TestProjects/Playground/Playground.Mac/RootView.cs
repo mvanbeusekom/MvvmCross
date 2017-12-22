@@ -36,6 +36,7 @@ namespace Playground.Mac
 
             var set = this.CreateBindingSet<RootView, RootViewModel>();
             set.Bind(lblRandomColor).For(lbl => lbl.TextColor).WithConversion<RandomColorValueConverter>();
+            set.Bind(btnChild).For(btn => btn.Enabled).To(vm => vm.IsLoggedIn).WithConversion<NotValueConverter>();
             set.Bind(btnChild).To(vm => vm.ShowChildCommand);
             set.Bind(btnModal).To(vm => vm.ShowModalCommand);
             set.Bind(btnSheet).To(vm => vm.ShowSheetCommand);
