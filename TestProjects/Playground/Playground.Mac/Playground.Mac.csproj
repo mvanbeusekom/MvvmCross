@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="ValueConverters\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -112,6 +113,7 @@
       <DependentUpon>ToolbarWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="TabsRootView.cs" />
+    <Compile Include="ValueConverters\RandomColorValueConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />

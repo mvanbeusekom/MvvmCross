@@ -26,12 +26,15 @@ namespace Playground.Mac
 
 		[Outlet]
 		AppKit.NSButton btnWindow { get; set; }
+
+		[Outlet]
+		AppKit.NSTextField lblRandomColor { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (btnTabs != null) {
-				btnTabs.Dispose ();
-				btnTabs = null;
+			if (lblRandomColor != null) {
+				lblRandomColor.Dispose ();
+				lblRandomColor = null;
 			}
 
 			if (btnChild != null) {
@@ -47,6 +50,11 @@ namespace Playground.Mac
 			if (btnSheet != null) {
 				btnSheet.Dispose ();
 				btnSheet = null;
+			}
+
+			if (btnTabs != null) {
+				btnTabs.Dispose ();
+				btnTabs = null;
 			}
 
 			if (btnWindow != null) {

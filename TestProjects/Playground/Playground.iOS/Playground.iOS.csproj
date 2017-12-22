@@ -167,6 +167,7 @@
     <Compile Include="Views\NestedModalView.designer.cs">
       <DependentUpon>NestedModalView.cs</DependentUpon>
     </Compile>
+    <Compile Include="ValueConverters\RandomColorValueConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\MvvmCross\Core\Core\MvvmCross.Core.csproj">
@@ -204,6 +205,9 @@
     <BundleResource Include="Resources\settings%402x.png" />
     <BundleResource Include="Resources\settings%403x.png" />
     <BundleResource Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ValueConverters\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

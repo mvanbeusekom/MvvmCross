@@ -11,69 +11,72 @@ using UIKit;
 
 namespace Playground.iOS.Views
 {
-    [Register("RootView")]
+    [Register ("RootView")]
     partial class RootView
     {
         [Outlet]
-        [GeneratedCode("iOS Designer", "1.0")]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnChild { get; set; }
 
         [Outlet]
-        [GeneratedCode("iOS Designer", "1.0")]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnModal { get; set; }
 
         [Outlet]
-        [GeneratedCode("iOS Designer", "1.0")]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnNavModal { get; set; }
 
         [Outlet]
-        [GeneratedCode("iOS Designer", "1.0")]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnOverrideAttribute { get; set; }
 
         [Outlet]
-        [GeneratedCode("iOS Designer", "1.0")]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnSplit { get; set; }
 
         [Outlet]
-        [GeneratedCode("iOS Designer", "1.0")]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnTabs { get; set; }
 
-        void ReleaseDesignerOutlets()
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel lblRandomColor { get; set; }
+
+        void ReleaseDesignerOutlets ()
         {
-            if (btnChild != null)
-            {
-                btnChild.Dispose();
+            if (btnChild != null) {
+                btnChild.Dispose ();
                 btnChild = null;
             }
 
-            if (btnModal != null)
-            {
-                btnModal.Dispose();
+            if (btnModal != null) {
+                btnModal.Dispose ();
                 btnModal = null;
             }
 
-            if (btnNavModal != null)
-            {
-                btnNavModal.Dispose();
+            if (btnNavModal != null) {
+                btnNavModal.Dispose ();
                 btnNavModal = null;
             }
 
-            if (btnOverrideAttribute != null)
-            {
-                btnOverrideAttribute.Dispose();
+            if (btnOverrideAttribute != null) {
+                btnOverrideAttribute.Dispose ();
                 btnOverrideAttribute = null;
             }
 
-            if (btnSplit != null)
-            {
-                btnSplit.Dispose();
+            if (btnSplit != null) {
+                btnSplit.Dispose ();
                 btnSplit = null;
             }
 
-            if (btnTabs != null)
-            {
-                btnTabs.Dispose();
+            if (btnTabs != null) {
+                btnTabs.Dispose ();
                 btnTabs = null;
+            }
+
+            if (lblRandomColor != null) {
+                lblRandomColor.Dispose ();
+                lblRandomColor = null;
             }
         }
     }

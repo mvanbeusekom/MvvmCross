@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -691,18 +691,32 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eLT-Ld-1Ir">
+                                <rect key="frame" x="8" y="243" width="464" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="l6e-zZ-Sj5"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Random text color from ValueConverter" id="95L-4x-hI7">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="eLT-Ld-1Ir" secondAttribute="trailing" constant="10" id="1Ji-e3-ouW"/>
                             <constraint firstItem="A7y-RT-j0l" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="35" id="CSc-bR-V00"/>
                             <constraint firstItem="iQr-KL-QsX" firstAttribute="top" secondItem="FRn-TF-Pqx" secondAttribute="bottom" constant="19" id="IYJ-n9-W4p"/>
                             <constraint firstItem="KoN-aA-DJE" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="PQT-u2-Ass"/>
                             <constraint firstItem="Pp2-5e-UKm" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="RAQ-Tc-6lp"/>
                             <constraint firstItem="Pp2-5e-UKm" firstAttribute="top" secondItem="A7y-RT-j0l" secondAttribute="bottom" constant="22" id="XCv-1O-CuB"/>
                             <constraint firstItem="iQr-KL-QsX" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="bZJ-Bv-GQN"/>
+                            <constraint firstItem="eLT-Ld-1Ir" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="lvG-kr-XhX"/>
                             <constraint firstItem="KoN-aA-DJE" firstAttribute="top" secondItem="Pp2-5e-UKm" secondAttribute="bottom" constant="23" id="mhw-Zs-7Yi"/>
                             <constraint firstItem="FRn-TF-Pqx" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="qW5-hA-ZJf"/>
                             <constraint firstItem="FRn-TF-Pqx" firstAttribute="top" secondItem="KoN-aA-DJE" secondAttribute="bottom" constant="30" id="rxI-CG-wuJ"/>
                             <constraint firstItem="A7y-RT-j0l" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="wo8-vj-7zG"/>
+                            <constraint firstItem="eLT-Ld-1Ir" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="yrc-eD-LPt"/>
                         </constraints>
                     </view>
                     <connections>
@@ -711,6 +725,7 @@
                         <outlet property="btnSheet" destination="Si5-fQ-NyB" id="SN3-Sa-y43"/>
                         <outlet property="btnTabs" destination="iQr-KL-QsX" id="SkP-2Z-Rre"/>
                         <outlet property="btnWindow" destination="FRn-TF-Pqx" id="sQa-Pe-2KW"/>
+                        <outlet property="lblRandomColor" destination="eLT-Ld-1Ir" id="iZD-5K-PtW"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -953,6 +968,9 @@
                                 <toolbarItem reference="Sq9-6o-ZDm"/>
                             </defaultToolbarItems>
                         </toolbar>
+                        <connections>
+                            <outlet property="delegate" destination="VBd-kr-Qq4" id="qep-gP-x6a"/>
+                        </connections>
                     </window>
                     <connections>
                         <outlet property="menuItem1" destination="gsR-CX-7Ga" id="Srs-fE-LRv"/>

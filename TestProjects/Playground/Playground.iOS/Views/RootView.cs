@@ -3,6 +3,7 @@ using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
 using Playground.Core.ViewModels;
+using Playground.iOS.ValueConverters;
 using UIKit;
 
 namespace Playground.iOS.Views
@@ -29,6 +30,7 @@ namespace Playground.iOS.Views
             set.Bind(btnModal).To(vm => vm.ShowModalCommand);
             set.Bind(btnNavModal).To(vm => vm.ShowModalNavCommand);
             set.Bind(btnOverrideAttribute).To(vm => vm.ShowOverrideAttributeCommand);
+            set.Bind(lblRandomColor).For(lbl => lbl.TextColor).WithConversion<RandomColorValueConverter>();
 
             set.Apply();
         }
